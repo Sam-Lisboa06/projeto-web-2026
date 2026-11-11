@@ -1,4 +1,4 @@
-//FALTA COLOCAR FOTOS E CORES AINDA A DECIDIR
+
 <!doctype html>
 <html lang="pt-PT">
   <head>
@@ -18,7 +18,7 @@
   >
     <header class="sticky top-0 z-10 bg-white border-b border-slate-200">
       <div
-        class="mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-3"
+        class="mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 md:grid md:grid-cols-[1fr_auto_1fr]"
       >
         <!-- Mais tarde: trocar o texto pelo logótipo (<img> com alt) -->
         <div href="index.html" class="flex items-center">
@@ -38,95 +38,38 @@
           <span id="menu-icone" aria-hidden="true">☰</span> Menu
         </button>
  
-        <nav
-          id="menu-principal"
-          aria-label="Principal"
-          class="hidden md:block w-full md:w-auto"
-        >
-          <ul
-            class="flex flex-col md:flex-row md:items-center gap-1 text-sm border-t border-slate-200 pt-3 md:border-0 md:pt-0"
-          >
-            <li>
-              <a
-                href="index.html"
-                aria-current="page"
-                class="block rounded px-3 py-1.5 bg-blue-50 text-blue-800 font-semibold"
-                >Início</a
-              >
-            </li>
-            <li>
-              <a
-                href="catalogo.html"
-                class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-                >Catálogo</a
-              >
-            </li>
-            <li>
-              <a
-                href="sobre-nos.html"
-                class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-                >Sobre nós</a
-              >
-            </li>
-            <li>
-              <a
-                href="contactos.html"
-                class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-                >Contactos</a
-              >
-            </li>
-            <li>
-              <a
-                href="pedido-especial.html"
-                class="block rounded px-3 py-1.5 bg-blue-700 text-white font-semibold hover:bg-blue-800"
-                >Pedir peça especial</a
-              >
-            </li>
-            <li>
-              <a
-                href="carrinho.html"
-                class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-              >
-                <svg
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="9" cy="20" r="1" />
-                  <circle cx="18" cy="20" r="1" />
-                  <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" />
-                </svg>
-                <span class="md:sr-only">Carrinho</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="entrar.html"
-                class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-              >
-                <svg
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
-                </svg>
-                <span class="md:sr-only">Entrar</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div id="menu-principal" class="hidden w-full md:contents">
+  <nav aria-label="Principal" class="md:justify-self-center">
+    <ul class="flex flex-col md:flex-row gap-1 text-sm border-t border-slate-200 pt-3 md:border-0 md:pt-0">
+      <li>
+        <a href="index.html" aria-current="page"
+           class="block rounded px-3 py-1.5 bg-blue-50 text-blue-800 font-semibold">Início</a>
+      </li>
+      <li>
+        <a href="catalogo.html"
+           class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Catálogo</a>
+      </li>
+      <li>
+        <a href="sobre-nos.html"
+           class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Sobre nós</a>
+      </li>
+      <li>
+        <a href="contactos.html"
+           class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Contactos</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav aria-label="Pedidos e conta" class="md:justify-self-end">
+    <ul class="flex flex-col md:flex-row md:items-center gap-1 text-sm">
+      <li>
+        <a href="pedido-especial.html"
+           class="block rounded px-3 py-1.5 bg-blue-700 text-white font-semibold hover:bg-blue-800">Pedir peça especial</a>
+      </li>
+      <!-- Mantém aqui os teus dois <li> do carrinho e da conta, tal como já estão -->
+    </ul>
+  </nav>
+</div>
       </div>
     </header>
  
