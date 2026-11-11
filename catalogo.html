@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Catálogo MotaPrints: peças para motas e carros, caixas para cromos e porta-chaves impressos em 3D." />
+    <title>Catálogo · MotaPrints</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/catalogo.js" defer></script>
+  </head>
+
+  <body
+    class="bg-slate-50 text-slate-900 font-['Source_Sans_3',sans-serif] antialiased"
+  >
+    <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+    <header class="sticky top-0 z-10 bg-white border-b border-slate-200">
+      <div
+        class="mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-3"
+      >
+        <!-- Mais tarde: trocar o texto pelo logótipo (<img> com alt) -->
+        <a
+          href="index.html"
+          class="font-['Sora',sans-serif] text-xl font-bold tracking-tight"
+          >MotaPrints</a
+        >
+
+        <!-- Botão do menu: só aparece em ecrãs pequenos; comportamento em js/menu.js -->
+        <button
+          type="button"
+          id="menu-botao"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+          class="md:hidden rounded border border-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        >
+          <span id="menu-icone" aria-hidden="true">☰</span> Menu
+        </button>
+
+        <nav
+          id="menu-principal"
+          aria-label="Principal"
+          class="hidden md:block w-full md:w-auto"
+        >
+          <ul
+            class="flex flex-col md:flex-row md:items-center gap-1 text-sm border-t border-slate-200 pt-3 md:border-0 md:pt-0"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                >Início</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalogo.html"
+                aria-current="page"
+                class="block rounded px-3 py-1.5 bg-blue-50 text-blue-800 font-semibold"
+                >Catálogo</a
+              >
+            </li>
+            <li>
+              <a
+                href="sobre-nos.html"
+                class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                >Sobre nós</a
+              >
+            </li>
+            <li>
+              <a
+                href="contactos.html"
+                class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                >Contactos</a
+              >
+            </li>
+            <li>
+              <a
+                href="pedido-especial.html"
+                class="block rounded px-3 py-1.5 bg-blue-700 text-white font-semibold hover:bg-blue-800"
+                >Pedir peça especial</a
+              >
+            </li>
+            <li>
+              <a
+                href="carrinho.html"
+                class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="9" cy="20" r="1" />
+                  <circle cx="18" cy="20" r="1" />
+                  <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" />
+                </svg>
+                <span class="md:sr-only">Carrinho</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="entrar.html"
+                class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+                </svg>
+                <span class="md:sr-only">Entrar</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-8">
+      <nav aria-label="Trilho de navegação" class="text-sm text-slate-500">
+        <a href="index.html" class="hover:underline">Início</a>
+        <span aria-hidden="true"> › </span>
+        <span aria-current="page">Catálogo</span>
+      </nav>
+
+      <div class="mt-3 flex flex-wrap items-end justify-between gap-4">
+        <h1 class="font-['Sora',sans-serif] text-3xl font-bold tracking-tight">Catálogo</h1>
+      </div>
+
+      <div class="mt-6 lg:grid lg:grid-cols-[16rem_1fr] lg:items-start lg:gap-8">
+        <!-- Filtros: botão recolhível em mobile, barra lateral a partir de lg -->
+        <aside aria-label="Filtros">
+          <button
+            type="button"
+            id="filtros-botao"
+            aria-expanded="false"
+            aria-controls="filtros-painel"
+            class="lg:hidden w-full rounded border border-slate-300 bg-white px-4 py-2.5 text-left font-semibold hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+          >
+            <span id="filtros-icone" aria-hidden="true">▾</span> Filtros
+          </button>
+          <div id="filtros-painel" class="hidden lg:block mt-3 lg:mt-0">
+            <form
+              id="filtros-form"
+              class="flex flex-col gap-5 rounded-lg border border-slate-200 bg-white p-4 text-sm"
+            >
+              <fieldset>
+                <legend class="font-semibold">Categoria</legend>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="categoria" value="motas" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>Peças para motas</span>
+              </label>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="categoria" value="carros" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>Peças para carros</span>
+              </label>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="categoria" value="mundial-2026" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>Mundial 2026</span>
+              </label>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="categoria" value="porta-chaves" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>Porta-chaves</span>
+              </label>
+              </fieldset>
+              <fieldset>
+                <legend class="font-semibold">Material</legend>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="material" value="petg" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>PETG</span>
+              </label>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="material" value="pla" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>PLA</span>
+              </label>
+              <label class="flex items-center gap-2 py-1.5">
+                <input type="checkbox" name="material" value="tpu" class="h-4 w-4 rounded border-slate-300 accent-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <span>TPU</span>
+              </label>
+              </fieldset>
+              <button
+                type="button"
+                id="filtros-limpar"
+                class="rounded border border-blue-700 px-3 py-2 font-semibold text-blue-700 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+              >
+                Limpar filtros
+              </button>
+            </form>
+          </div>
+        </aside>
+
+        <section aria-label="Produtos" class="mt-6 lg:mt-0">
+          <p id="contagem" aria-live="polite" class="mb-4 text-sm text-slate-500"></p>
+          <!-- Exemplos: trocar por produtos e preços reais -->
+          <ul id="lista-produtos" class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            <li
+              data-categoria="motas"
+              data-material="petg"
+            >
+              <a
+                href="produto.html"
+                class="block h-full overflow-hidden rounded-lg border border-slate-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="aspect-square bg-slate-200 flex items-center justify-center text-sm text-slate-500">Foto</div>
+                <div class="p-3 sm:p-4">
+                  <h2 class="font-semibold leading-snug">Tampa de motor personalizada</h2>
+                  <p class="text-xs sm:text-sm text-slate-500">PETG · várias cores</p>
+                  <p class="mt-2 font-semibold text-blue-700">12,90 €</p>
+                  <span class="mt-3 block rounded bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-white">Ver detalhe</span>
+                </div>
+              </a>
+            </li>
+            <li
+              data-categoria="motas"
+              data-material="tpu"
+            >
+              <a
+                href="produto.html"
+                class="block h-full overflow-hidden rounded-lg border border-slate-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="aspect-square bg-slate-200 flex items-center justify-center text-sm text-slate-500">Foto</div>
+                <div class="p-3 sm:p-4">
+                  <h2 class="font-semibold leading-snug">Proteção de manete</h2>
+                  <p class="text-xs sm:text-sm text-slate-500">TPU · preto ou cor à escolha</p>
+                  <p class="mt-2 font-semibold text-blue-700">8,50 €</p>
+                  <span class="mt-3 block rounded bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-white">Ver detalhe</span>
+                </div>
+              </a>
+            </li>
+            <li
+              data-categoria="carros"
+              data-material="petg"
+            >
+              <a
+                href="produto.html"
+                class="block h-full overflow-hidden rounded-lg border border-slate-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="aspect-square bg-slate-200 flex items-center justify-center text-sm text-slate-500">Foto</div>
+                <div class="p-3 sm:p-4">
+                  <h2 class="font-semibold leading-snug">Suporte de telemóvel para carro</h2>
+                  <p class="text-xs sm:text-sm text-slate-500">PETG · várias cores</p>
+                  <p class="mt-2 font-semibold text-blue-700">9,90 €</p>
+                  <span class="mt-3 block rounded bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-white">Ver detalhe</span>
+                </div>
+              </a>
+            </li>
+            <li
+              data-categoria="mundial-2026"
+              data-material="pla"
+            >
+              <a
+                href="produto.html"
+                class="block h-full overflow-hidden rounded-lg border border-slate-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="aspect-square bg-slate-200 flex items-center justify-center text-sm text-slate-500">Foto</div>
+                <div class="p-3 sm:p-4">
+                  <h2 class="font-semibold leading-snug">Caixa para cromos Mundial 2026</h2>
+                  <p class="text-xs sm:text-sm text-slate-500">PLA · várias cores</p>
+                  <p class="mt-2 font-semibold text-blue-700">14,90 €</p>
+                  <span class="mt-3 block rounded bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-white">Ver detalhe</span>
+                </div>
+              </a>
+            </li>
+            <li
+              data-categoria="porta-chaves"
+              data-material="pla"
+            >
+              <a
+                href="produto.html"
+                class="block h-full overflow-hidden rounded-lg border border-slate-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="aspect-square bg-slate-200 flex items-center justify-center text-sm text-slate-500">Foto</div>
+                <div class="p-3 sm:p-4">
+                  <h2 class="font-semibold leading-snug">Porta-chaves com nome</h2>
+                  <p class="text-xs sm:text-sm text-slate-500">PLA · várias cores</p>
+                  <p class="mt-2 font-semibold text-blue-700">4,50 €</p>
+                  <span class="mt-3 block rounded bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-white">Ver detalhe</span>
+                </div>
+              </a>
+            </li>
+            <li
+              data-categoria="porta-chaves"
+              data-material="tpu"
+            >
+              <a
+                href="produto.html"
+                class="block h-full overflow-hidden rounded-lg border border-slate-200 bg-white hover:shadow-md transition-shadow"
+              >
+                <div class="aspect-square bg-slate-200 flex items-center justify-center text-sm text-slate-500">Foto</div>
+                <div class="p-3 sm:p-4">
+                  <h2 class="font-semibold leading-snug">Porta-chaves de clube</h2>
+                  <p class="text-xs sm:text-sm text-slate-500">TPU · cores do clube</p>
+                  <p class="mt-2 font-semibold text-blue-700">5,50 €</p>
+                  <span class="mt-3 block rounded bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-white">Ver detalhe</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <p id="sem-resultados" class="hidden rounded-lg border border-slate-200 bg-white p-6 text-center">
+            Nenhum produto com estes filtros. Experimenta limpar os filtros.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas; confirmar contactos) ===== -->
+    <footer class="bg-slate-900 text-slate-300">
+      <div
+        class="mx-auto max-w-6xl px-4 py-10 grid gap-8 text-sm sm:grid-cols-2 md:grid-cols-4"
+      >
+        <div>
+          <p class="font-semibold text-white">MotaPrints</p>
+          <p class="mt-2">Modelação e impressão 3D, feito em Portugal.</p>
+        </div>
+        <nav aria-label="Rodapé: navegação">
+          <p class="font-semibold text-white">Navegação</p>
+          <ul class="mt-2 flex flex-col gap-1">
+            <li><a class="hover:text-white" href="index.html">Início</a></li>
+            <li><a class="hover:text-white" href="sobre-nos.html">Sobre nós</a></li>
+            <li><a class="hover:text-white" href="catalogo.html">Catálogo</a></li>
+            <li><a class="hover:text-white" href="contactos.html">Contactos</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Rodapé: categorias">
+          <p class="font-semibold text-white">Categorias</p>
+          <ul class="mt-2 flex flex-col gap-1">
+            <li><a class="hover:text-white" href="catalogo.html?categoria=motas">Motas</a></li>
+            <li><a class="hover:text-white" href="catalogo.html?categoria=carros">Carros</a></li>
+            <li><a class="hover:text-white" href="catalogo.html?categoria=mundial-2026">Mundial 2026</a></li>
+            <li><a class="hover:text-white" href="catalogo.html?categoria=porta-chaves">Porta-chaves</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="font-semibold text-white">Contacto</p>
+          <ul class="mt-2 flex flex-col gap-1">
+            <li>Instagram @motaprints</li>
+            <li>motaprints@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <p class="border-t border-slate-800 px-4 py-4 text-center text-xs text-slate-500">
+        Projeto de Aplicações Web · ISCAC · 2026/2027
+      </p>
+    </footer>
+  </body>
+</html>

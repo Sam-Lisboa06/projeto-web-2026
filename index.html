@@ -16,13 +16,12 @@
   <body
     class="bg-slate-50 text-slate-900 font-sans antialiased"
   >
-    <header class="sticky top-0 z-10 bg-white border-b border-slate-200">
+    <header class="sticky top-0 z-10 bg-blue-50 border-b border-slate-200">
       <div
         class="mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 md:grid md:grid-cols-[1fr_auto_1fr]"
       >
-        <!-- Mais tarde: trocar o texto pelo logótipo (<img> com alt) -->
         <div href="index.html" class="flex items-center">
-          <img src="img/logo_motaprints.png" alt="MotaPrints" class="h-20 w-auto sm:h-22">
+        <img src="img/logo_motaprints.png" alt="MotaPrints" class="h-20 w-auto sm:h-22">
 
 
         </div>
@@ -66,7 +65,30 @@
         <a href="pedido-especial.html"
            class="block rounded px-3 py-1.5 bg-blue-700 text-white font-semibold hover:bg-blue-800">Pedir peça especial</a>
       </li>
-      <!-- Mantém aqui os teus dois <li> do carrinho e da conta, tal como já estão -->
+      <li>
+  <a href="carrinho.html"
+     class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+          <svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" />
+          </svg>
+          <span class="md:sr-only">Carrinho</span>
+          </a>
+        </li>
+      <li>
+      <a href="entrar.html"
+          class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+          <svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+          </svg>
+        <span class="md:sr-only">Entrar</span>
+      </a>
+    </li>
+      
     </ul>
   </nav>
 </div>
@@ -102,12 +124,8 @@
             </div>
           </div>
  
-          <!---- por foto
-               <img src="img/hero.jpg" alt="..." class="rounded-lg w-full" width="..." height="..."> -->
-          <div
-            class="aspect-[4/3] rounded-lg border border-slate-700 bg-slate-800 flex items-center justify-center text-sm text-slate-400"
-          >
-            Foto da peça em destaque
+          <div class="aspect-[4/3] rounded-lg border border-slate-700 bg-slate-800 flex items-center justify-center text-sm text-slate-400">
+            <img src="img/peça_destaque.jpeg" alt="Foto em peça_destaque" class="rounded-lg w-full" width="h-20" height="w-auto">
           </div>
         </div>
       </section>
@@ -138,7 +156,7 @@
         </dl>
       </section>
  
-      <!-- retirar mundial 2026, por 3 categorias em baixo e 2 em baixo centradas -->
+
       <section
         aria-labelledby="t-categorias"
         class="mx-auto max-w-6xl px-4 py-12"
