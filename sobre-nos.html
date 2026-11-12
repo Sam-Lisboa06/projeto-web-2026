@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Três primos, engenharia e a paixão por resolver problemas com uma impressora 3D: a história por trás da MotaPrints."
+    />
+    <title>Sobre nós · MotaPrints</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="js/menu.js" defer></script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased">
+    <!-- cabeçalho -->
+    <header class="sticky top-0 z-10 bg-white border-b border-slate-200">
+      <div
+        class="mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 md:grid md:grid-cols-[1fr_auto_1fr]"
+      >
+        <a href="index.html" class="flex w-fit items-center">
+          <img src="img/logo_motaprints.png" alt="MotaPrints" class="h-20 w-auto sm:h-22">
+        </a>
+
+        <button
+          type="button"
+          id="menu-botao"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+          class="md:hidden rounded border border-slate-300 px-3 py-1.5 text-sm font-semibold hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        >
+          <span id="menu-icone" aria-hidden="true">☰</span> Menu
+        </button>
+
+        <div id="menu-principal" class="hidden w-full md:contents">
+          <nav aria-label="Principal" class="md:justify-self-center">
+            <ul
+              class="flex flex-col md:flex-row gap-1 text-sm border-t border-slate-200 pt-3 md:border-0 md:pt-0"
+            >
+              <li>
+                <a href="index.html" class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Início</a>
+              </li>
+              <li>
+                <a href="catalogo.html" class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Catálogo</a>
+              </li>
+              <li>
+                <a href="sobre-nos.html" aria-current="page" class="block rounded px-3 py-1.5 bg-blue-50 text-blue-800 font-semibold">Sobre nós</a>
+              </li>
+              <li>
+                <a href="contactos.html" class="block rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">Contactos</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Pedidos e conta" class="md:justify-self-end">
+            <ul class="flex flex-col md:flex-row md:items-center gap-1 text-sm">
+              <li>
+                <a
+                  href="pedido-especial.html"
+                  class="block whitespace-nowrap rounded px-3 py-1.5 bg-blue-700 text-white font-semibold hover:bg-blue-800"
+                  >Pedir peça especial</a
+                >
+              </li>
+              <li>
+                <a href="carrinho.html" class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+                  <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="9" cy="20" r="1" />
+                    <circle cx="18" cy="20" r="1" />
+                    <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" />
+                  </svg>
+                  <span class="md:sr-only">Carrinho</span>
+                </a>
+              </li>
+              <li>
+                <a href="entrar.html" class="flex items-center gap-2 rounded px-3 py-1.5 text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+                  <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+                  </svg>
+                  <span class="md:sr-only">Entrar</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- cabeçalho 2-->
+      <section class="bg-slate-900 text-white border-b-4 border-blue-600">
+        <div class="mx-auto max-w-3xl px-4 py-14 md:py-20 text-center">
+          <p class="mt-10 text-sm font-semibold text-blue-300">A oficina</p>
+          <h1 class="mt-3 text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+            Três primos. Uma só obsessão: problemas bem resolvidos.
+          </h1>
+          <div class="mx-auto mt-8 h-1 w-20 rounded bg-blue-500"></div>
+        </div>
+      </section>
+
+      <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <!-- história -->
+        <section aria-labelledby="t-historia" class="mx-auto max-w-3xl">
+          <h2 id="t-historia" class="sr-only">A nossa história</h2>
+          <div class="flex flex-col gap-6 text-lg leading-relaxed text-slate-700">
+            <p class="text-xl text-slate-900">
+              A MotaPrints nasceu da curiosidade de três primos da família Mota
+              e de uma impressora 3D no meio da sala. Vimos de percursos
+              ligados à engenharia e partilhamos desde miúdos a mesma mania:
+              perceber como as coisas funcionam, e como se podem fazer melhor.
+            </p>
+            <p>
+              Começou como começa quase tudo nesta área: com pequenos problemas
+              do dia a dia. Um suporte que não existia em lado nenhum, uma peça
+              de plástico partida que já ninguém vendia, uma ideia que só
+              precisava de alguém que a desenhasse. Em vez de aceitar o «não
+              há», começámos a modelar e a imprimir as nossas próprias
+              soluções: primeiro para nós, depois para a família e amigos, e
+              agora para quem nos encontra aqui.
+            </p>
+            <p>
+              O princípio manteve-se desde o primeiro dia: cada peça passa por
+              modelação CAD cuidada antes de tocar numa impressora, e só sai da
+              oficina depois de testada como se fosse para nós próprios.
+            </p>
+            <p>
+              Hoje o catálogo vai das tampas de motor para motas aos
+              porta-chaves e acessórios para o carro, mas a lista nunca está
+              fechada. Se dá para desenhar, dá para imprimir: conta-nos o
+              problema, e nós tratamos da solução.
+            </p>
+          </div>
+
+          
+        </section>
+
+        <section aria-labelledby="t-principios" class="mt-16 text-center">
+          <h2 id="t-principios" class="text-2xl font-bold tracking-tight">
+            Como trabalhamos
+          </h2>
+          <ul class="mt-8 grid gap-4 sm:grid-cols-3">
+            <li class="flex flex-col items-center rounded-lg border border-slate-200 bg-white p-6 text-center">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 font-bold text-white">1</span>
+              <h3 class="mt-4 font-semibold">Modelação CAD cuidada</h3>
+              <p class="mt-2 text-sm text-slate-600">Cada peça é desenhada em 3D antes de tocar numa impressora.</p>
+            </li>
+            <li class="flex flex-col items-center rounded-lg border border-slate-200 bg-white p-6 text-center">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 font-bold text-white">2</span>
+              <h3 class="mt-4 font-semibold">Testada antes de sair</h3>
+              <p class="mt-2 text-sm text-slate-600">Só sai da oficina depois de testada como se fosse para nós próprios.</p>
+            </li>
+            <li class="flex flex-col items-center rounded-lg border border-slate-200 bg-white p-6 text-center">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 font-bold text-white">3</span>
+              <h3 class="mt-4 font-semibold">Sem catálogo fechado</h3>
+              <p class="mt-2 text-sm text-slate-600">Se dá para desenhar, dá para imprimir. Conta-nos o problema e tratamos da solução.</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Chamada final -->
+      <section class="bg-blue-700 text-white">
+        <div
+          class="mx-auto max-w-6xl px-4 py-10 flex flex-wrap items-center justify-between gap-6"
+        >
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">
+              Queres ver o que saiu da oficina?
+            </h2>
+            <p class="mt-1 text-blue-100">
+              Explora o catálogo por categoria ou conta-nos a tua ideia.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="catalogo.html"
+              class="rounded bg-white px-5 py-3 font-semibold text-blue-800 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >Ver catálogo</a
+            >
+            <a
+              href="contactos.html"
+              class="rounded border border-blue-300 px-5 py-3 font-semibold hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >Falar connosco</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- rodapé -->
+    <footer class="bg-slate-900 text-slate-300">
+      <div
+        class="mx-auto max-w-6xl px-4 py-10 grid gap-8 text-sm sm:grid-cols-2 md:grid-cols-4"
+      >
+        <div>
+          <p class="font-semibold text-white">MotaPrints</p>
+          <p class="mt-2">Modelação e impressão 3D, feito em Portugal.</p>
+        </div>
+        <nav aria-label="Rodapé: navegação">
+          <p class="font-semibold text-white">Navegação</p>
+          <ul class="mt-2 flex flex-col gap-1">
+            <li><a class="hover:text-white" href="index.html">Início</a></li>
+            <li><a class="hover:text-white" href="sobre-nos.html">Sobre nós</a></li>
+            <li><a class="hover:text-white" href="catalogo.html">Catálogo</a></li>
+            <li><a class="hover:text-white" href="contactos.html">Contactos</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Rodapé: categorias">
+          <p class="font-semibold text-white">Categorias</p>
+          <ul class="mt-2 flex flex-col gap-1">
+            <li><a class="hover:text-white" href="catalogo.html?categoria=motas">Motas</a></li>
+            <li><a class="hover:text-white" href="catalogo.html?categoria=carros">Carros</a></li>
+            <li><a class="hover:text-white" href="catalogo.html?categoria=porta-chaves">Porta-chaves</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="font-semibold text-white">Contacto</p>
+          <ul class="mt-2 flex flex-col gap-1">
+            <li>Instagram @motaprints</li>
+            <li>motaprints@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <p class="border-t border-slate-800 px-4 py-4 text-center text-xs text-slate-500">
+        Projeto de Aplicações Web · ISCAC · 2026/2027
+      </p>
+    </footer>
+  </body>
+</html>
